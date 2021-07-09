@@ -4,8 +4,8 @@ var canvas = document.querySelector("#scene"),
   amount = 100,
   mouse = {x:0,y:0},
   radius = 2;
-
-var colors = ["#FFFFFF"];
+var i=0;
+var colors = ["#FFFFFF","#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"];
 
 var copy = document.querySelector("#copy");
 
@@ -26,7 +26,7 @@ function Particle(x,y){
   this.accY = 0;
   this.friction = Math.random()*0.05 + 0.9;
 
-  this.color = colors[Math.floor(Math.random()*6)];
+  this.color = colors[i];
 }
 
 Particle.prototype.render = function() {
@@ -83,7 +83,7 @@ function initScene(){
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  ctx.font = "bold "+(ww/6)+"px sans-serif";
+  ctx.font = "bold "+(ww/6)+"px Comic Sans MS";
   ctx.textAlign = "center";
   ctx.fillText(copy.value, ww/2, wh/2);
 
@@ -104,6 +104,11 @@ function initScene(){
 }
 
 function onMouseClick(){
+    i++;
+    if(i ===6){
+      i = 0;
+    }
+    initScene();
     radius = 2;
   
 }
