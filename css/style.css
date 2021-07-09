@@ -1,4 +1,16 @@
 
+canvas{
+  background: black;
+  width: 100vw;
+  height: 75vh;
+}
+
+
+#particles-js {
+    background: black;
+    height: 100vh;
+}
+
 .team {
   text-align: center
 }
