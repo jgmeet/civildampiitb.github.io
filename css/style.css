@@ -1,7 +1,7 @@
 
 canvas{
-  background: rgb(3, 26, 70);
-  width: 100vw;
+  background: rgb(2, 20, 54);
+  width: 100%; /*was vw*/
   height: 75vh;
 }
 
