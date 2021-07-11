@@ -5,7 +5,7 @@ var canvas = document.querySelector("#scene"),
   mouse = {x:0,y:0},
   radius = 2;
 var i=0;
-var colors = ["#FFFFFF","#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"];
+var colors = ["#FFFFFF","#468966","#FFF0A5", "#AA5CF8 ","#20F761 ","#FFB03B","#B64926","#F7F364 ","#FC79DC ", "#8E2800"];
 
 var copy = document.querySelector("#copy");
 
@@ -105,7 +105,7 @@ function initScene(){
 
 function onMouseClick(){
     i++;
-    if(i ===6){
+    if(i ===10){
       i = 0;
     }
     initScene();
